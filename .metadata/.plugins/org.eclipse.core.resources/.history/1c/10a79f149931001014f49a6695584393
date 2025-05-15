@@ -1,0 +1,12 @@
+package com.practice.demo;
+
+public class Frequency {
+
+	private static void frequencyOfEachChar(String str) {
+		
+		char c = str.toCharArray();
+		
+		
+	}
+	
+}

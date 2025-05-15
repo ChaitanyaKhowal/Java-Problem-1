@@ -1,0 +1,38 @@
+package com.practice.demo;
+
+public class Frequency {
+	
+	public static void main(String[] args) {
+		
+		String str = "leetcode";
+		frequencyOfEachChar(str);
+		
+	}
+
+	private static void frequencyOfEachChar(String str) {
+
+		char[] c = str.toCharArray();
+
+		boolean[] visited = new boolean[c.length];
+
+		for (int i = 0; i < c.length; i++) {
+			if (visited[i]) {
+				continue;
+			}
+
+			int count = 0;
+
+			for (int j = i; j < c.length; j++) {
+				if (c[i] == c[j]) {
+					count++;
+					visited[j] = true;
+				}
+			}
+
+			System.out.println(c[i] + " occurs " + count + " times");
+
+		}
+
+	}
+
+}

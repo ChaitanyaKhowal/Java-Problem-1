@@ -1,0 +1,9 @@
+package com.practice.demos;
+
+public class FirstNonRepeatingChar {
+
+	private static void findFirstNonRepeatingChar(String str) {
+
+	}
+
+}

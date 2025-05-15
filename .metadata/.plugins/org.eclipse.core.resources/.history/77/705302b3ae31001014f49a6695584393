@@ -1,0 +1,40 @@
+package com.practice.demo;
+
+public class Frequency {
+
+	public static void main(String[] args) {
+
+		String str = "Chaitanya Khowal chirag Chinna";
+
+		findFrequencyOfEachChar(str);
+
+	}
+
+	private static void findFrequencyOfEachChar(String str) {
+
+		char[] c = str.toCharArray();
+		boolean visited[] = new boolean[str.length()];
+
+		for (int i = 0; i < str.length(); i++) {
+
+			if (visited[i]) {
+				continue;
+			}
+
+			int count = 1;
+
+			for (int j = i + 1; j < str.length(); j++) {
+
+				if (c[i] == c[j]) {
+					count++;
+					visited[j] = true;
+				}
+
+			}
+
+		}
+		System.out.println(c[i] + " occurs " + count + " times");
+
+	}
+
+}
