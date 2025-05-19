@@ -1,0 +1,27 @@
+package com.practice.demos;
+
+public class FirstNonRepeatingChar {
+
+	public static void main(String[] args) {
+		String str = "hhoofdy";
+		findFirstNonRepeatingChar(str);
+	}
+
+	private static void findFirstNonRepeatingChar(String str) {
+
+		for (int i = 0; i < str.length(); i++) {
+
+			char c = str.charAt(i);
+
+			if (str.indexOf(c) == str.lastIndexOf(c)) {
+				System.out.println("First non repeating character in the given string is : " + c);
+				return;
+			}
+
+		}
+
+		System.out.println("Every character is repeated");
+
+	}
+
+}
